@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Szegóły zamówienia {{order_id}}: </h2>
+<p>Całkowita wartość zamówienia:</p> <ul>{{total_price}} zł </ul>
+
+<p> Produkty: </p>
+<ol>{% for product in products %}
+     <li>
+         {{product.product}}
+     </li>
+{% endfor %}</ol>
+{% endblock %}
